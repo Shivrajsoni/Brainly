@@ -1,4 +1,5 @@
 
+import { InputComponent } from "./Input"
 import { CrossIcon } from "../icons/CrossIcon"
 import { Button } from "./Button"
 // controlled Component 
@@ -8,10 +9,8 @@ export function CreateContentModal ({open,onClose}){
            <div className="flex flex-col justify-center">
             <span
             className="bg-white opacity-100 p-4 rounded-xl">
-                <div className="flex justify-end">
-                    <div onClick={onClose}>
+                <div className="flex justify-end" onClick={onClose}>
                     <CrossIcon/>
-                    </div>
                     
                 </div>
                 <div>
@@ -30,10 +29,3 @@ export function CreateContentModal ({open,onClose}){
     </div>
 }
 
-function InputComponent({onChange,placeholder}: {onChange:()=>void}){
-    return <div>
-        <input placeholder = {placeholder} className="px-4 py-2 m-2"
-        onChange = {onChange} 
-        ></input>
-    </div>
-}
